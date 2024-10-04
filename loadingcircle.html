@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            background-color: rgb(166, 209, 166);
+            height: 600px;
+            width: 600px;
+            border-radius: 50%;
+            animation-name: rotate1;
+            animation-duration: 1s;
+            animation-iteration-count: 2;
+            animation-direction: normal;
+            animation-timing-function: linear; 
+
+
+        }
+        .child{
+            background-color: red;
+            height: 200px;
+            width: 200px;
+            /* animation-name: rotate1;
+            animation-duration: 4s;
+            animation-iteration-count: 2;
+            animation-direction: normal; */
+            
+            /* transition-duration: 4s;
+            transition-property: all;
+            transition-timing-function: ease-in; */
+            border-radius: 50%;
+
+        }
+
+        @keyframes rotate1{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+
+            }
+        }
+
+        @keyframes rotate{
+            0%{
+                transform: translate(0px,0px);
+
+            }
+            25%{
+                transform: translate(400px,0px);
+
+            }
+            50%{
+                transform: translate(400px,400px);
+
+            }
+            75%{
+                transform: translate(0px,400px);
+
+            }
+            100%{
+                transform: translate(0px,0px);
+
+            }
+        }
+      
+        @keyframes an1{
+            0%{
+                transform: translate(0px,0px);
+            }
+            50%{
+                transform: translate(400px,0px);
+            }
+            100%{
+                transform: translate(0px,0px);
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+        
+
+    </div>
+</body>
+</html>
