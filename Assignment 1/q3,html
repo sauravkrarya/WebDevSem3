@@ -1,0 +1,32 @@
+<!--3) Design a web page using HTML to print your name and move it in both direction
+using appropriate tags. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moving Name</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      h1 {
+        color: #008080;
+      }
+      marquee {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ff6347;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Name Moving in Both Directions</h1>
+
+    <marquee behavior="alternate" direction="left" scrollamount="10"
+      >Saurav Kumar Arya</marquee>
+  </body>
+</html>
