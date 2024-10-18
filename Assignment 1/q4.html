@@ -14,7 +14,7 @@ respective course, fees, and duration. -->
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-        h1 {
+        h1, h2 {
             color: #2E8B57;
         }
         a {
@@ -25,6 +25,19 @@ respective course, fees, and duration. -->
         a:hover {
             text-decoration: underline;
         }
+        .course-section {
+            margin-top: 40px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .back-to-top {
+            margin-top: 20px;
+            display: block;
+            font-size: 16px;
+            color: #FF6347;
+        }
     </style>
 </head>
 <body>
@@ -33,9 +46,39 @@ respective course, fees, and duration. -->
     <p>Select a course below to view the details:</p>
     
     <ul>
-        <li><a href="engineering.html">Engineering Course Information</a></li>
-        <li><a href="management.html">Management Course Information</a></li>
+        <li><a href="#engineering">Engineering Course Information</a></li>
+        <li><a href="#management">Management Course Information</a></li>
     </ul>
+
+    <div id="engineering" class="course-section">
+        <h2>Engineering Course</h2>
+
+        <h3>Course Objectives</h3>
+        <p>The objective of the <strong>Engineering Course</strong> is to equip students with the necessary technical skills, problem-solving abilities, and knowledge required to excel in various fields of engineering, including mechanical, electrical, civil, and computer science.</p>
+
+        <h3>Fees</h3>
+        <p>The course fee for the Engineering program is <strong>$10,000</strong> per year.</p>
+
+        <h3>Duration</h3>
+        <p>The duration of the Engineering course is <strong>4 years</strong>.</p>
+
+        <a href="#top" class="back-to-top">Back to Top</a>
+    </div>
+
+    <div id="management" class="course-section">
+        <h2>Management Course</h2>
+
+        <h3>Course Objectives</h3>
+        <p>The objective of the <strong>Management Course</strong> is to develop leadership, decision-making, and strategic thinking skills in students. It aims to prepare individuals for roles in business, finance, marketing, and human resource management.</p>
+
+        <h3>Fees</h3>
+        <p>The course fee for the Management program is <strong>$8,000</strong> per year.</p>
+
+        <h3>Duration</h3>
+        <p>The duration of the Management course is <strong>2 years</strong>.</p>
+
+        <a href="#top" class="back-to-top">Back to Top</a>
+    </div>
 
 </body>
 </html>

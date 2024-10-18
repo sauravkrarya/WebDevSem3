@@ -1,0 +1,124 @@
+<!-- 1) Design your timetable using HTML and CSS. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Timetable</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 20px;
+      }
+      h1 {
+        text-align: center;
+        color: #2e8b57;
+        margin-bottom: 20px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0 auto;
+        font-size: 16px;
+      }
+      table,
+      th,
+      td {
+        border: 2px solid #008080;
+      }
+      th,
+      td {
+        padding: 15px;
+        text-align: center;
+      }
+      th {
+        background-color: #2e8b57;
+        color: white;
+      }
+      td {
+        background-color: #f0f8ff;
+      }
+      tr:nth-child(even) td {
+        background-color: #e6f7ff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Weekly Timetable</h1>
+
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>9:00 AM - 10:00 AM</th>
+        <th>10:00 AM - 11:00 AM</th>
+        <th>11:00 AM - 12:00 PM</th>
+        <th>12:00 PM - 1:00 PM</th>
+        <th>1:00 PM - 2:00 PM</th>
+        <th>2:00 PM - 3:00 PM</th>
+        <th>3:00 PM - 4:00 PM</th>
+      </tr>
+      <tr>
+        <th>Monday</th>
+        <td>Math</td>
+        <td>English</td>
+        <td>Computer Science</td>
+        <td>Lunch Break</td>
+        <td>Physics</td>
+        <td>Project Work</td>
+        <td>Sports</td>
+      </tr>
+      <tr>
+        <th>Tuesday</th>
+        <td>Chemistry</td>
+        <td>Math</td>
+        <td>English</td>
+        <td>Lunch Break</td>
+        <td>Computer Science</td>
+        <td>Physics</td>
+        <td>Library</td>
+      </tr>
+      <tr>
+        <th>Wednesday</th>
+        <td>Physics</td>
+        <td>Chemistry</td>
+        <td>Math</td>
+        <td>Lunch Break</td>
+        <td>English</td>
+        <td>Computer Science</td>
+        <td>Sports</td>
+      </tr>
+      <tr>
+        <th>Thursday</th>
+        <td>Computer Science</td>
+        <td>Math</td>
+        <td>Chemistry</td>
+        <td>Lunch Break</td>
+        <td>English</td>
+        <td>Physics</td>
+        <td>Project Work</td>
+      </tr>
+      <tr>
+        <th>Friday</th>
+        <td>English</td>
+        <td>Computer Science</td>
+        <td>Math</td>
+        <td>Lunch Break</td>
+        <td>Physics</td>
+        <td>Chemistry</td>
+        <td>Sports</td>
+      </tr>
+      <tr>
+        <th>Saturday</th>
+        <td>Project Work</td>
+        <td>Library</td>
+        <td>Chemistry</td>
+        <td>Lunch Break</td>
+        <td>Math</td>
+        <td>English</td>
+        <td>Free Time</td>
+      </tr>
+    </table>
+  </body>
+</html>
