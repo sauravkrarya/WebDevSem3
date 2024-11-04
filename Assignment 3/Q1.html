@@ -1,0 +1,104 @@
+<!-- 1) Write HTML and CSS code for division of web page as shown below by using
+div tag and display properties. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout Assignment</title>
+<style>
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    border: 5px solid #3a4b8d;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+
+  .top-section {
+    background-color: #b2d8b2;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+
+  .separator {
+    height: 20px;
+    background-color: #f0d4d4;
+    margin-bottom: 10px;
+  }
+
+
+  .bottom-section {
+    display: flex;
+    gap: 10px;
+    
+  }
+
+  .left-column {
+    background-color: #7fbf7f;
+    width: 25%;
+    height: 200px;
+    
+  }
+
+  .right-columns {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+
+  }
+
+  .right-top {
+    background-color: #b2b2b2;
+    height: 100px;
+  }
+
+  .right-bottom {
+    display: flex;
+
+  }
+
+  .right-bottom-left {
+    background-color: #5bc0de;
+    height: 100px;
+    flex: 1;
+  }
+
+  .right-bottom-right {
+    background-color: #f0ad4e;
+    height: 100px;
+    flex: 1;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="top-section"></div>
+  
+
+  <div class="separator"></div>
+  
+
+  <div class="bottom-section">
+
+    <div class="left-column"></div>
+    
+
+    <div class="right-columns">
+      <div class="right-top"></div>
+      <div class="right-bottom">
+        <div class="right-bottom-left"></div>
+        <div class="right-bottom-right"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!-- 2) Create a web page using (HTML & CSS) only as shown below by using
+appropriate tags. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semantic Layout</title>
+<style>
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 1fr 3fr 1fr;
+
+    height: 100vh;
+  }
+
+  header {
+    grid-column: 1 / -1;
+    background-color: #6a1b9a;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+
+  nav {
+    grid-column: 1 / -1;
+    background-color: #29b6f6;
+    padding: 10px;
+    text-align: center;
+  }
+
+  aside {
+    background-color: #e53935;
+    padding: 20px;
+    color: white;
+  }
+
+  main {
+    background-color: #8e24aa;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  main article {
+    background-color: #e0f7fa;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+  section {
+    background-color: #fb8c00;
+    padding: 20px;
+    color: white;
+  }
+
+  footer {
+    grid-column: 1 / -1;
+    background-color: #8bc34a;
+    padding: 10px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>header</h1>
+  </header>
+  
+
+  <nav>
+    <p>Nav</p>
+  </nav>
+  
+
+  <aside>
+    <p>Aside</p>
+  </aside>
+  
+  <main>
+    <h2 >Main</h2>
+    <article>Article 1</article>
+    <article>Article 2</article>
+    <article>Article 3</article>
+    <article>Article 4</article>
+  </main>
+  
+  <section>
+    <p>Section</p>
+  </section>
+  
+
+  <footer>
+    <p>Footer</p>
+  </footer>
+</div>
+
+</body>
+</html>

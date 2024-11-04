@@ -1,0 +1,268 @@
+<!-- 4) Design the following static web pages required for an online
+book store web site
+A) HOME PAGE:
+The static home page must contain three iframes.
+Top iframe: Logo and the Store name and links to Home page, Login page,
+Registration page, Catalogue page and Cart page
+(the description of these pages are given below).
+Left iframe: At least four links for navigation, which will display the
+catalogue of respective links. For e.g.: When you click the link “MCA”
+the catalogue for MCA Books should be displayed in the Right iframe.
+Right iframe: The pages to the links in the left iframe must be loaded here. Initially
+this page contains description of the web site.
+n
+B) LOGIN PAGE: This page looks like below:
+C) CATOLOGUE PAGE:
+The catalogue page should contain the details of all the books available in the web site in a table.
+The details should contain the Author Name, Publisher, Price and Add to cart button.
+D) CART PAGE:
+The cart page contains the details about the books which are added to the cart.
+The cart page should contains the following information in tabular format.
+Book name, Price, Quantity and Amount.
+
+E) REGISTRATION PAGE:
+Create a “Registration Form “with the following fields:
+1) Name (text field)
+2) Password (password field)
+3) E-mail id (text field)
+4) Phone number (text field)
+5) Gender (radio button)
+6) Date of birth (3 select boxes)
+7) Languages known (check boxes – English, Hindi, Odiya, Tamil, Bangla)
+8) Address (text area) -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book Store</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        .header .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .header .logo img {
+            width: 40px;
+            height: 40px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+        .nav-links a:hover {
+            background-color: #45a049;
+        }
+
+
+        .container {
+            display: flex;
+            margin-top: 20px;
+        }
+        .left-sidebar {
+            width: 200px;
+            padding: 10px;
+            border-right: 1px solid #ddd;
+            background-color: #e8e8e8;
+        }
+        .left-sidebar h3 {
+            margin-top: 0;
+        }
+        .left-sidebar a {
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+
+        .login-form, .registration-form, .catalogue-table, .cart-table {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .login-form input, .registration-form input, .registration-form select, .registration-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        .login-form button, .registration-form button {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .login-form button:hover, .registration-form button:hover {
+            background-color: #45a049;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="header">
+        <div class="logo">
+            <img src="https://www.shutterstock.com/image-vector/hand-keep-book-read-source-600nw-1127076767.jpg" alt="Logo"> 
+            <h1>Arya Book Store</h1>
+        </div>
+        <div class="nav-links">
+            <a href="#" onclick="showPage('home')">Home</a>
+            <a href="#" onclick="showPage('login')">Login</a>
+            <a href="#" onclick="showPage('registration')">Registration</a>
+            <a href="#" onclick="showPage('catalogue')">Catalogue</a>
+            <a href="#" onclick="showPage('cart')">Cart</a>
+        </div>
+    </div>
+
+
+    <div class="container">
+
+        <div class="left-sidebar">
+            <h3>Categories</h3>
+            <a href="#" onclick="showCatalogue('MCA')">MCA</a>
+            <a href="#" onclick="showCatalogue('CSIT')">CSIT</a>
+            <a href="#" onclick="showCatalogue('CSE')">CSE</a>
+        </div>
+
+
+        <div class="content" id="content">
+
+            <div id="home" class="page">
+                <h2>Welcome to Our Book Store</h2>
+                <p>Find a variety of books across different categories including MCA, CSIT, and CSE. Enjoy browsing!</p>
+            </div>
+
+
+            <div id="login" class="page" style="display:none;">
+                <div class="login-form">
+                    <h2>Login</h2>
+                    <label for="username">User ID:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Login</button>
+                    <button type="submit">Reset</button>
+                </div>
+            </div>
+
+
+            <div id="registration" class="page" style="display:none;">
+                <div class="registration-form">
+                    <h2>Registration Form</h2>
+                    <label>Name:</label><input type="text" required>
+                    <label>Password:</label><input type="password" required>
+                    <label>Email:</label><input type="email" required>
+                    <label>Phone:</label><input type="tel" required>
+                    <label>Gender:</label>
+                    <input type="radio" name="gender"> Male
+                    <input type="radio" name="gender"> Female
+                    <label>Date of Birth:</label>
+                    <select><option>Day</option></select>
+                    <select><option>Month</option></select>
+                    <select><option>Year</option></select>
+                    <label>Languages Known:</label>
+                    <input type="checkbox"> English
+                    <input type="checkbox"> Hindi
+                    <label>Address:</label><textarea></textarea>
+                    <button type="submit">Register</button>
+                </div>
+            </div>
+
+
+            <div id="catalogue" class="page" style="display:none;">
+                <h2>Catalogue</h2>
+                <table class="catalogue-table">
+                    <tr><th>Author</th><th>Publisher</th><th>Price</th><th>Add to Cart</th></tr>
+                    <tr><td>Author 1</td><td>Publisher 1</td><td>$20</td><td><button>Add</button></td></tr>
+                    <tr><td>Author 2</td><td>Publisher 2</td><td>$25</td><td><button>Add</button></td></tr>
+                </table>
+            </div>
+
+
+            <div id="cart" class="page" style="display:none;">
+                <h2>Shopping Cart</h2>
+                <table class="cart-table">
+                    <tr><th>Book Name</th><th>Price</th><th>Quantity</th><th>Total</th></tr>
+                    <tr><td>Book 1</td><td>$20</td><td>1</td><td>$20</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.style.display = 'none');
+            document.getElementById(pageId).style.display = 'block';
+        }
+        
+        function showCatalogue(category) {
+            showPage('catalogue');
+
+        }
+    </script>
+
+</body>
+</html>
