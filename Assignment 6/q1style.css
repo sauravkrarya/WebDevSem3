@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.circle-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+/* Outer Circle */
+.outer-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    margin: -100px 0 0 -100px;
+    border: 5px solid blue;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: rotate-clockwise 4s linear infinite;
+}
+
+/* Middle Circle */
+.middle-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 5px solid lightblue;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: rotate-counterclockwise 6s linear infinite;
+}
+
+/* Inner Circle */
+.inner-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin: -50px 0 0 -50px;
+    border: 5px solid rgb(35, 82, 100);
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: rotate-clockwise 8s linear infinite;
+}
+
+/* Center Point */
+.center-point {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Animations */
+@keyframes rotate-clockwise {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-counterclockwise {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}

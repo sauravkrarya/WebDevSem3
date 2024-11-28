@@ -1,0 +1,24 @@
+<!-- Write JavaScript code to change the contents of a paragraph dynamically by inserting
+JavaScript in <head>. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Paragraph Update</title>
+    <script>
+
+      document.addEventListener("DOMContentLoaded", function () {
+
+        const paragraph = document.getElementById("dynamic-paragraph");
+
+        paragraph.textContent = "This content has been updated dynamically!";
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Dynamic Content Update Example</h1>
+    <p id="dynamic-paragraph">Original content of the paragraph.</p>
+  </body>
+</html>
